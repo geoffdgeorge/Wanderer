@@ -71,19 +71,29 @@ body {
         border-radius: 1rem;
         display: grid;
         grid-template: auto / 1fr;
-        grid-gap: .5rem;
+        grid-gap: 1rem;
         justify-items: center;
+    }
+
+    form input {
+        width: 60%;
+        padding: .5rem .9rem;
+        border: .1rem solid #acacac;
+        border-radius: 1rem;
+        font-family: menco, sans-serif;
+        font-weight: 300;  
+        font-size: 1.1rem;
     }
 
     form p {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-family: menco, sans-serif;
         font-weight: 300;  
     }
 
     form select {
-        /* Borrowed some suggested settings from this page to round out the look of my select: https://css-tricks.com/styling-a-select-like-its-2019/ */
+        /* Borrowed some suggested settings from this page to round out the look of my select elements: https://css-tricks.com/styling-a-select-like-its-2019/ */
         font-size: 1rem;
         font-family: sans-serif;
         font-weight: 700;

@@ -17,6 +17,10 @@
 
     <main>
         <form action="submit">
+            <p><strong>Name</strong></p>
+            <input type="text" for='submitBtn' name="name" id="name" placeholder="Required">
+            <p><strong>Link to Profile Image</strong></p>
+            <input type="text" for='submitBtn' name="picUrl" id="picUrl" placeholder="Required">
             <p><em><strong>1.</strong></em> Your mind is always buzzing with unexplored ideas and plans.</p>
             <select for='submitBtn' name="choices">
                 <option value="1">1 (Strongly Disagree)</option>
@@ -102,8 +106,10 @@
     </main>
 
     <footer>
-        <a href="/api/friends">The Full Befriended API</a>
+        <a href="/api/friends">Befriended API</a>
         <a href="https://github.com/geoffdgeorge/Befriended">Github Repo</a>
     </footer>
+    
+    <script src="frontEnd.js"></script>
 </body>
 </html>
