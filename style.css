@@ -90,6 +90,7 @@ body {
         font-size: 1.3rem;
         font-family: menco, sans-serif;
         font-weight: 300;  
+        width: 60%;
     }
 
     form select {
