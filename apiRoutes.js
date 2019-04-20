@@ -8,7 +8,7 @@ function apiRoutes(app) {
 
     app.get(`/api/friends/bff`, (req, res) => {
 
-        let bestFriend;
+        let bestFriends = [];
         let bestFriendDiff = 40;
 
         const newFriend = friends[friends.length - 1];
@@ -25,16 +25,26 @@ function apiRoutes(app) {
                 }
             }
 
-            console.log(friendDiff);
+            console.log(friendDiff)
 
-            if(friendDiff < bestFriendDiff) {
-                bestFriendDiff = friendDiff;
-                bestFriend = friends[i];
+            if(bestFriends === []) {
+                if(friendDiff < bestFriendDiff) {
+                    bestFriendDiff = friendDiff;
+                    bestFriends.push(friends[i]);
+                }
+            } else {
+                if(friendDiff < bestFriendDiff) {
+                    bestFriends = [];
+                    bestFriendDiff = friendDiff;
+                    bestFriends.push(friends[i]);
+                } else if (friendDiff === bestFriendDiff) {
+                    bestFriends.push(friends[i]);
+                }
             }
 
         }
 
-        res.json(bestFriend);
+        res.json(bestFriends);
 
     })
 
