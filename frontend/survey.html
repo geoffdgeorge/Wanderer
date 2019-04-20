@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Befriended: Survey</title>
+		<link rel="stylesheet" href="normalize.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/fri6tka.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Befriended</h1>
+			<h3>Find your best friend today!</h3>
+		</header>
+
+		<main>
+			<form action="submit">
+				<p id="nameLabel"><strong>Name</strong></p>
+				<input
+					type="text"
+					for="submitBtn"
+					name="name"
+					id="name"
+					placeholder="Required"
+					required
+				/>
+				<p id="picURLLabel"><strong>Link to Profile Image</strong></p>
+				<input
+					type="text"
+					for="submitBtn"
+					name="picURL"
+					id="picURL"
+					placeholder="Required"
+					required
+				/>
+				<p>
+					<em><strong>1.</strong></em> Your mind is always buzzing with
+					unexplored ideas and plans.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>2.</strong></em> Generally speaking, you rely more on your
+					experience than your imagination.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>3.</strong></em> You find it easy to stay relaxed and
+					focused even when there is some pressure.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>4.</strong></em> You rarely do something just out of sheer
+					curiosity.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>5.</strong></em> People can rarely upset you.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>6.</strong></em> It is often difficult for you to relate
+					to other people’s feelings.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>7.</strong></em> In a discussion, truth should be more
+					important than people’s sensitivities.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>8.</strong></em> You rarely get carried away by fantasies
+					and ideas.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>9.</strong></em> You think that everyone’s views should be
+					respected regardless of whether they are supported by facts or not.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<p>
+					<em><strong>10.</strong></em> You feel more energetic after spending
+					time with a group of people.
+				</p>
+				<select name="choices">
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<button id="submitBtn" type="submit">Submit</button>
+			</form>
+		</main>
+
+		<footer>
+			<a href="/api/friends">Befriended API</a>
+			<a href="https://github.com/geoffdgeorge/Befriended">Github Repo</a>
+		</footer>
+
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="frontEnd.js"></script>
+	</body>
+</html>
