@@ -6,6 +6,7 @@ const picURLInput = document.querySelector(`#picURL`);
 const surveyChoices = document.getElementsByName(`choices`);
 const nameLabel = document.querySelector(`#nameLabel`);
 const picURLLabel = document.querySelector(`#picURLLabel`);
+const modal = document.querySelector(`.modal`);
 
 /* Functions */
 
@@ -42,7 +43,8 @@ function handleClick(e) {
 			friend.answers.push(parseFloat(choice.value));
 		});
 
-		axios.post(`/api/friends`, friend)
+		axios
+			.post(`/api/friends`, friend)
 			.then(response => {
 				getBestFriend();
 			})
@@ -51,9 +53,38 @@ function handleClick(e) {
 			});
 
 		function getBestFriend() {
-			axios.get(`/api/friends/bff`)
+			axios
+				.get(`/api/friends/bff`)
 				.then(response => {
-					console.log(response);
+					const friends = response.data;
+
+					if (friends.length === 1) {
+						const friend = response.data[0];
+
+						const newH3 = document.createElement(`h3`);
+						newH3.textContent = friend.name;
+
+						const newImg = document.createElement(`img`);
+						newImg.src = friend.profilePic;
+						newImg.classList.add(`modal-img`);
+
+						modal.appendChild(newImg);
+						modal.appendChild(newH3);
+						modal.classList.add(`modal-open`);
+					} else if (friends.length > 1) {
+						friends.forEach(friend => {
+							const newH3 = document.createElement(`h3`);
+							newH3.textContent = friend.name;
+
+							const newImg = document.createElement(`img`);
+							newImg.src = friend.profilePic;
+							newImg.classList.add(`modal-img`);
+
+							modal.appendChild(newImg);
+							modal.appendChild(newH3);
+							modal.classList.add(`modal-open`);
+						});
+					}
 				})
 				.catch(err => {
 					console.log(err);
@@ -62,6 +93,18 @@ function handleClick(e) {
 	}
 }
 
+function closeModal(e) {
+	// Borrowed from this source for detecting click outside the modal: https://stackoverflow.com/questions/14188654/detect-click-outside-element-vanilla-javascript
+	const clickedInside = modal.contains(e.target);
+	if (!clickedInside) {
+		modal.classList.remove(`modal-open`);
+		while (modal.firstChild) {
+			modal.removeChild(modal.firstChild);
+		}
+	}
+}
+
 /* Calls */
 
-submitBtn.addEventListener("click", handleClick);
+document.addEventListener(`click`, closeModal);
+submitBtn.addEventListener(`click`, handleClick);
