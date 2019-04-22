@@ -61,6 +61,9 @@ function handleClick(e) {
 					if (friends.length === 1) {
 						const friend = response.data[0];
 
+						const modalDiv = document.createElement(`div`);
+						modalDiv.classList.add(`modal-div`);
+
 						const newH3 = document.createElement(`h3`);
 						newH3.textContent = friend.name;
 
@@ -68,11 +71,15 @@ function handleClick(e) {
 						newImg.src = friend.profilePic;
 						newImg.classList.add(`modal-img`);
 
-						modal.appendChild(newImg);
-						modal.appendChild(newH3);
+						modalDiv.appendChild(newImg);
+						modalDiv.appendChild(newH3);
+						modal.appendChild(modalDiv);
 						modal.classList.add(`modal-open`);
 					} else if (friends.length > 1) {
 						friends.forEach(friend => {
+							const modalDiv = document.createElement(`div`);
+							modalDiv.classList.add(`modal-div`);
+
 							const newH3 = document.createElement(`h3`);
 							newH3.textContent = friend.name;
 
@@ -80,8 +87,9 @@ function handleClick(e) {
 							newImg.src = friend.profilePic;
 							newImg.classList.add(`modal-img`);
 
-							modal.appendChild(newImg);
-							modal.appendChild(newH3);
+							modalDiv.appendChild(newImg);
+							modalDiv.appendChild(newH3);
+							modal.appendChild(modalDiv);
 							modal.classList.add(`modal-open`);
 						});
 					}

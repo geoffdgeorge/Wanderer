@@ -150,11 +150,13 @@ body {
     /* Modal Styling */
 
     .modal {
-        background: #000000;
+        background: #b09276;
+        border: .1rem solid #ffffff;
+        border-radius: 1rem;
         padding: 1rem;
         display: grid;
         grid-gap: 1rem;
-        grid-template: auto / 1fr 3fr;
+        grid-template: auto / 1fr;
         justify-items: center;
         align-items: center;
         position: fixed;
@@ -166,6 +168,14 @@ body {
         opacity: 0;
         visibility: hidden;
         transition: all 0.25s ease-out;
+    }
+
+    .modal-div {
+        display: grid;
+        grid-template: auto / 1fr;
+        grid-gap: 1rem;
+        justify-items: center;
+        align-items: center;
     }
 
     .modal-open {
@@ -185,12 +195,22 @@ body {
     
 @media only screen and (min-width: 540px) {
 
+    .modal-div {
+        grid-template: auto / 1fr 3fr;
+    }
+
     h1 {
         font-size: 5rem;
     }
     
     h3 {
         font-size: 2rem;
+    }
+
+    .modal h3 {
+        margin: 0;
+        padding: 0;
+        border: none;
     }
     
 }
