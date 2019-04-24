@@ -39,14 +39,14 @@ function handleClick(e) {
 	} else if (!nameInput.value && !destInput.value) {
 		nameLabel.textContent = `Please include a name`;
 		nameLabel.style.color = `red`;
-		picURLLabel.textContent = `Link to Profile Image (with a "jpg," "png," "tiff," or "gif" extension)`;
+		picURLLabel.textContent = `Link to Profile Image`;
 		picURLLabel.style.color = `#000000`;
 		destLabel.textContent = `Please include a dream destination`;
 		destLabel.style.color = `red`;
 	} else if (!nameInput.value) {
 		nameLabel.textContent = `Please include a name`;
 		nameLabel.style.color = `red`;
-		picURLLabel.textContent = `Link to Profile Image (with a "jpg," "png," "tiff," or "gif" extension)`;
+		picURLLabel.textContent = `Link to Profile Image`;
 		picURLLabel.style.color = `#000000`;
 		destLabel.textContent = `Your Dream Vacation Destination`;
 		destLabel.style.color = `#000000`;
@@ -60,7 +60,7 @@ function handleClick(e) {
 	} else if (!destInput.value) {
 		nameLabel.textContent = `Name`;
 		nameLabel.style.color = `#000000`;
-		picURLLabel.textContent = `Link to Profile Image (with a "jpg," "png," "tiff," or "gif" extension)`;
+		picURLLabel.textContent = `Link to Profile Image`;
 		picURLLabel.style.color = `#000000`;
 		destLabel.textContent = `Please include a dream destination`;
 		destLabel.style.color = `red`;
