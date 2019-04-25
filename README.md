@@ -79,7 +79,10 @@ The information returned in the GET response is then used to populate a modal th
 
 ### **1. Image uploading and better image validation**
 
-At the moment, images are validated on the front end with a check for a valid file extension at the end of the link that each user submits. (I.e., the code checks for ".jpg," ".png," ".gif," and ".tiff") This isn't the best UX approach and can easily be fooled. (A user merely has to type ".jpg" or something similar at the end of the string they submit, even if the string isn't an actual URL link to a photo.)
+At the moment, images are validated on the front end with a check for a valid file extension at the end of the link that each user submits. (I.e., the code checks for ".jpg," ".png," ".gif," and ".tiff") This isn't the best UX approach and can easily be fooled. (A user merely has to type ".jpg" or something similar at the end of the string they submit for photo URL, even if the string isn't an actual URL link to a photo.)
+
+In the future, the URL input will be replaced with an input to upload a photo directly from the user.
 
 ### **2. Profile pages with saved matches**
 
+Right now, once users fill out the survey and get entered into the Wanderer API, they are shown their closest matches once. In the future, it would be helpful to provide a profile page for each user, where they can track new matches as more people take the survey and add new information to the database.
