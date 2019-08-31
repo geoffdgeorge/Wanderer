@@ -122,9 +122,7 @@ function handleClick(e) {
 							const newH3 = document.createElement(`h3`);
 							newH3.textContent = friend.name;
 							const newH4 = document.createElement(`h4`);
-							newH4.textContent = `Dream destination: ${
-								friend.dreamDestination
-							}`;
+							newH4.textContent = `Dream destination: ${friend.dreamDestination}`;
 
 							const newImg = document.createElement(`img`);
 							newImg.src = friend.profilePic;
@@ -147,9 +145,7 @@ function handleClick(e) {
 								const newH3 = document.createElement(`h3`);
 								newH3.textContent = friend.name;
 								const newH4 = document.createElement(`h4`);
-								newH4.textContent = `Dream destination: ${
-									friend.dreamDestination
-								}`;
+								newH4.textContent = `Dream destination: ${friend.dreamDestination}`;
 
 								const newImg = document.createElement(`img`);
 								newImg.src = friend.profilePic;
