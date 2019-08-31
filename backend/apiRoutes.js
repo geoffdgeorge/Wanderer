@@ -22,8 +22,6 @@ function apiRoutes(app) {
 				}
 			}
 
-			console.log(friendDiff);
-
 			if (bestFriends === []) {
 				if (friendDiff < bestFriendDiff) {
 					bestFriendDiff = friendDiff;
